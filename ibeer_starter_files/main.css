@@ -17,9 +17,12 @@ body{
     margin: 0;
     background-color: #eeebda;
 }
-h1, h2, h3{
+h1, h2,{
     font-family: "Josefin Sans", sans-serif;
     margin-top: 0;
+}
+h3{
+  font-family: "Dancing Script", sans-serif;
 }
 img{
     max-width: 100%;
@@ -29,6 +32,7 @@ img{
 }
 .wrapper{
     width: 1000px;
+    margin: 0 auto;
 
     /*
         TODO:
@@ -37,6 +41,13 @@ img{
         the major page sections
     */
 
+}
+.insert{
+  display: flex;
+  align-self: center;
+  width: 90%;
+  margin:-50px auto 0 auto;
+  
 }
 #site-header{
     /*
@@ -56,7 +67,7 @@ img{
         - Add a background image "header-img.jpg"
         make sure that the path to the image is correct
     */
-    background-image:url("header-img.jpg");
+    background-image:url(file:///Users/kelly/ibeer/ibeer_starter_files/img/header-img.jpg);
     background-size: cover;
     background-position: right bottom;
 }
@@ -77,7 +88,7 @@ img{
         TODO:
         - Use the script font: 'Dancing Script' fot this text
     */
-    font: Dancing Script; //?
+
 }
 #main-navigation{
     background: #444;
@@ -87,7 +98,7 @@ img{
         - Use Flexbox to arrange the navigation links
     */
     display:flex;
-    flex-direction:row;
+    justify-content: space-between;
 }
 #main-navigation a{
     display: block;
@@ -100,7 +111,7 @@ img{
         TODO:
         - Flexbox - Create general spacing between nav links
     */
-    justify-content:flex-end;
+
 }
 #main-navigation #logo{
     margin-right: 400px;
@@ -110,7 +121,7 @@ img{
         - Flexbox - The logo needs to take up more space
         that the other links
     */
-    align-items: stretch;
+
 }
 main{
     padding: 20px;
@@ -121,10 +132,8 @@ main{
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
-    width: 33%;
-    float: left;
-    margin-left: 200px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
 aside{
     padding: 20px;
@@ -135,7 +144,7 @@ aside{
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
-    width: 33%;
+    width: 200%;
     float: left;
 
 
@@ -179,7 +188,9 @@ article img{
         - Float article images to the right
         and match sizes and spacing to the mockup
     */
-    float:left;
+    float: right;
+    margin-bottom: 15px;
+    width:40%;
 }
 article footer p{
     /*
@@ -187,7 +198,14 @@ article footer p{
         - Style the article footer
         HINT: Look to the article header;
     */
-    font: Dancing Script;
+    line-height: 1em;
+    font-weight: bold;
+    text-align:center;
+    margin:10px 0;
+    padding:10px 0;
+    border-top: 1px solid #cc;
+    text-transform: uppercase;
+    clear: both;
 
 }
 #site-footer{
@@ -197,6 +215,10 @@ article footer p{
         TODO:
         - Style the site footer
     */
-    float:left;
-    width:100%;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    margin-top: 40px
+    padding:15px 0;
+    font-size: 12px;
 }
